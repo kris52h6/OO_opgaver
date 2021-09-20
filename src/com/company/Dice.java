@@ -19,4 +19,6 @@ public class Dice {
     public int getFaceValue() {
         return faceValue;
     }
+
+
 }
