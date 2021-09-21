@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,6 +22,7 @@ public class Main {
 
         // print object
         System.out.println(person);
+        System.out.println();
 
         // Opgave 2 - Dice
         //
@@ -27,8 +30,24 @@ public class Main {
         Dice dice = new Dice();
         int diceValue = dice.getFaceValue();
 
-        System.out.print("The random dice value is: ");
+        Dice[] array = new Dice[5];
+        for (int i = 0; i < array.length; i++) {
+            dice = new Dice();
+            diceValue = dice.getFaceValue();
+            array[i] = dice;
+
+        }
+
+        System.out.print("The values of the 5 dice roll are : ");
+        for (int i= 0; i < array.length; i++) {
+            System.out.print(array[i].getFaceValue() + " ");
+        }
+
+        System.out.println();
+        System.out.println();
+/*        System.out.print("\nThe random dice value is: ");
         System.out.println(diceValue);
+        */
 
         // Opgave 4 - kage
         //
@@ -50,6 +69,7 @@ public class Main {
         double kjContent = cake.calculateKjContent();
         System.out.print("The total kJ content of the cake is: ");
         System.out.printf("%.0f kJ", kjContent);
+        System.out.println();
 
 
 
