@@ -31,6 +31,8 @@ public class Main {
         int diceValue = dice.getFaceValue();
 
         Dice[] array = new Dice[5];
+        // loop through the array and create a new dice with a new faceValue,
+        // and then place it in the array at position i
         for (int i = 0; i < array.length; i++) {
             dice = new Dice();
             diceValue = dice.getFaceValue();
@@ -55,17 +57,17 @@ public class Main {
         Cake cake = new Cake(4);
         System.out.println(cake);
 
+        // ingredients weight
         double weightOfIngredients = cake.calculateWeightOfIngredients();
         System.out.print("The total weight of the ingredients is: ");
         System.out.printf("%.2f g\n",weightOfIngredients);
 
-
-
+        // cake weight
         double weightOfCake = cake.calculateWeightOfCake();
         System.out.print("The weight of the finished cake is: ");
         System.out.printf("%.2f g\n",weightOfCake);
 
-
+        // kJ content
         double kjContent = cake.calculateKjContent();
         System.out.print("The total kJ content of the cake is: ");
         System.out.printf("%.0f kJ", kjContent);

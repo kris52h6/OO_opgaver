@@ -16,10 +16,6 @@ public class Lamp {
         return turnedOn;
     }
 
-    public void setTurnedOn() {
-
-    }
-
     public int lampSwitch() {
         if (turnedOn) {
             this.turnedOn = false;
