@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -28,34 +26,26 @@ public class Main {
         //
 
         Dice dice = new Dice();
-        int diceValue = dice.getFaceValue();
+        Dice[] dieArray = new Dice[5];
 
-        Dice[] array = new Dice[5];
         // loop through the array and create a new dice with a new faceValue,
         // and then place it in the array at position i
-        for (int i = 0; i < array.length; i++) {
-            dice = new Dice();
-            diceValue = dice.getFaceValue();
-            array[i] = dice;
-
+        for (int i = 0; i < dieArray.length; i++) {
+            dieArray[i] = new Dice();
         }
 
         System.out.print("The values of the 5 dice roll are : ");
-        for (int i= 0; i < array.length; i++) {
-            System.out.print(array[i].getFaceValue() + " ");
+        for (int i= 0; i < dieArray.length; i++) {
+            System.out.print(dieArray[i].getFaceValue() + " ");
         }
-
-        System.out.println();
-        System.out.println();
-/*        System.out.print("\nThe random dice value is: ");
-        System.out.println(diceValue);
-        */
+        System.out.print("\n\n");
 
         // Opgave 4 - kage
         //
 
         Cake cake = new Cake(4);
         System.out.println(cake);
+        System.out.print("\n");
 
         // ingredients weight
         double weightOfIngredients = cake.calculateWeightOfIngredients();
@@ -72,9 +62,6 @@ public class Main {
         System.out.print("The total kJ content of the cake is: ");
         System.out.printf("%.0f kJ", kjContent);
         System.out.println();
-
-
-
 
     }
 }
